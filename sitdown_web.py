@@ -455,7 +455,7 @@ function drawPlot(svgId, legId, w, axis) {
       const nearRight = x > W - MR - 50;
       elText({ x: nearRight ? x - 8 : x + 8, y: y - 7, 'font-size': 10, 'font-weight': 'bold',
                fill: DET_COL, 'text-anchor': nearRight ? 'end' : 'start' },
-             `检${d.n} ${(v * 1000).toFixed(0)}`);
+             `检${d.n}: ${(v * 1000).toFixed(0)}`);
     } else {
       el('path', { d: `M${x},${MT} L${x+4},${MT+7} L${x-4},${MT+7} Z`, fill: DET_COL });
       elText({ x: x, y: MT + 18, 'font-size': 10, 'font-weight': 'bold', fill: DET_COL, 'text-anchor': 'middle' }, `检${d.n}`);
